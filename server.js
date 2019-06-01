@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -54,8 +55,8 @@ app.get('/about', (req, res) => {
 	});
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
 	console.log(
-		'Server is up and will serve you on http://localhost:8080/'
+		`Server is up and will serve you on ${port}`
 	);
 });
